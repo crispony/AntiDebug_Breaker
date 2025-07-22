@@ -1,0 +1,37 @@
+[
+  {
+    "id": "Bypass_Debugger",
+    "name": "Bypass Debugger",
+    "description": "绕过无限Debugger， 如绕不过去或报错请使用火狐忽略断点。"
+  },
+  {
+    "id": "hook_log v0.1",
+    "name": "hook_log v0.1",
+    "description": "防止js重写log方法，该版本不生效可以尝试使用v0.2版本。"
+  },
+  {
+    "id": "hook_log v0.2",
+    "name": "hook_log v0.2",
+    "description": "防止js重写log方法"
+  },
+  {
+    "id": "hook_table",
+    "name": "Hook table",
+    "description": "绕过js检测运行时间差来实现反调试"
+  },
+  {
+    "id": "hook_clear",
+    "name": "hook clear",
+    "description": "禁止js清除控制台数据"
+  },
+  {
+    "id": "hook_close",
+    "name": "hook close",
+    "description": "重写close方法，以此来避免网站反调试关闭当前页面"
+  },
+  {
+    "id": "hook_history",
+    "name": "hook history",
+    "description": "避免网站反调试返回上一页或某个特定历史页面"
+  }
+]

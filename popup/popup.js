@@ -101,22 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         scriptItem.classList.remove('active');
                     }
 
-                    // 更新存储并同步到localStorage
+                    // 更新存储
                     chrome.storage.local.set({[hostname]: enabled}, () => {
-                        // 更新当前标签页的localStorage
-                        chrome.scripting.executeScript({
-                            target: {tabId: tab.id},
-                            func: (hostname, scripts) => {
-                                try {
-                                    const storageData = localStorage.getItem('AntiDebug_Breaker') || '{}';
-                                    const parsed = JSON.parse(storageData);
-                                    parsed[hostname] = scripts;
-                                    localStorage.setItem('AntiDebug_Breaker', JSON.stringify(parsed));
-                                } catch (e) {
-                                    console.warn('[AntiDebug] Failed to update localStorage', e);
-                                }
-                            },
-                            args: [hostname, enabled]
+                        // 通知后台更新脚本注册
+                        chrome.runtime.sendMessage({
+                            type: 'update_scripts_registration',
+                            hostname: hostname,
+                            enabledScripts: enabled
                         });
 
                         // 通知标签页更新状态

@@ -1,7 +1,7 @@
 {
   "name": "AntiDebug Breaker",
   "version": "1.0",
-  "description": "反调试破除者--AntiDebug_Breaker",
+  "description": "反调试破除者",
   "manifest_version": 3,
   "permissions": [
     "storage",

@@ -2,7 +2,7 @@
 
 ## Intro
 
-本插件是基于<a src="https://github.com/0xsdeo/Hook_JS">Hook_JS开源库</a>所写的google插件，将致力于绕过前端各种反调试操作。
+本插件是基于<a href="https://github.com/0xsdeo/Hook_JS">Hook_JS开源库</a>所写的google插件，将致力于绕过前端各种反调试操作。
 
 ## 插件安装
 

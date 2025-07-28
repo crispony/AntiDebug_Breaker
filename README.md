@@ -2,7 +2,7 @@
 
 ## Intro
 
-本插件是基于<a href="https://github.com/0xsdeo/Hook_JS">Hook_JS开源库</a>所写的google插件，将致力于绕过前端各种反调试操作。
+本插件是基于<a href="https://github.com/0xsdeo/Hook_JS">Hook_JS库</a>所写的google插件，将致力于绕过前端各种反调试操作。
 
 ## 插件安装
 
@@ -37,17 +37,19 @@
 
 本脚本功能同上，如这两个脚本均防止不了js重写log方法，可联系我本人。
 
+注：**这两个脚本不能混用。**
+
 - Hook table
 
 绕过js检测运行时间差来实现反调试。
 
-本脚本将针对以下这三种特征的反调试网站(注：包括但不仅限于这以下三种特征，需根据实际情况去判断是否使用本脚本)：
+本脚本将针对以下这三种特征的反调试网站(注：包括但不仅限于这以下三种特征，需根据实际情况去判断是否需要使用本脚本)：
 
-> 控制台清除
+> 频繁调用console.clear清除控制台数据
 
 > 控制台频繁输出大量内容
 
-> 打开控制台并进行完以上两种操作后直接使用location.href进行跳转，一般跳转到主域名为github.io的网站。
+> 进行完以上两种操作后直接使用location.href进行跳转，一般跳转到主域名为github.io的网站。
 
 如存在以上特征的网站，均可尝试使用本脚本去进行绕过。
 
@@ -70,6 +72,31 @@
 避免网站反调试返回上一页或某个特定历史页面。
 
 脚本原理：<a href="https://mp.weixin.qq.com/s/r-ZcP2knpmoVEK0y_26xBw">JS逆向系列10-反调试与反反调试</a>
+
+- Fixed window size
+
+固定浏览器高度宽度值以绕过前端检测用户是否打开控制台。
+
+固定的宽度高度值：
+```text
+innerHeight：660
+innerWidth：1366
+
+outerHeight：760
+outerWidth：1400
+```
+
+- 页面跳转JS代码定位通杀方案
+
+本脚本为CC11001100师傅所作，脚本原地址：`https://github.com/JSREI/page-redirect-code-location-hook`，用于阻断页面跳转，留在当前页面分析。
+
+## 插件使用注意事项
+
+进入网页后，无论是开启脚本还是关闭脚本，需要在页面刷新后才会生效。
+
+## 致谢
+
+CC11001100、Dexter
 
 ## Contact
 

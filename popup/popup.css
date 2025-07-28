@@ -55,6 +55,7 @@ header {
     align-items: center;
     gap: 12px;
     margin-top: 5px;
+    position: relative; /* 为GitHub图标定位提供参考 */
 }
 
 h1 {
@@ -306,4 +307,20 @@ footer {
     height: 3px;
     background: linear-gradient(90deg, var(--primary), var(--primary-light));
     border-radius: 0 0 8px 8px;
+}
+
+.github-link {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    color: var(--on-surface);
+    transition: color 0.3s;
+    width: 24px;
+    height: 24px;
+    z-index: 20;
+}
+
+.github-link:hover {
+    color: var(--primary-light);
+    transform: scale(1.1);
 }

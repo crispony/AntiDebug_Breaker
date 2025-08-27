@@ -97,11 +97,3 @@ outerWidth：1400
 ## 致谢
 
 CC11001100、Dexter
-
-## 交流群
-
-![1756226612203](image/README/1756226612203.jpg)
-
-## Contact
-
-如有bug或其他问题可提交issues，或者关注公众号Spade sec联系我。
